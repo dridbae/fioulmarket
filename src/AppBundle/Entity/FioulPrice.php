@@ -5,10 +5,12 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * FioulPrice
+ * FioulPrice.
  *
  * @ORM\Table(name="fioul_price")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\FioulPriceRepository")
+ *
+ * @codeCoverageIgnore
  */
 class FioulPrice
 {
@@ -29,9 +31,9 @@ class FioulPrice
     private $zipCode;
 
     /**
-     * @var int
+     * @var float
      *
-     * @ORM\Column(name="amount", type="smallint")
+     * @ORM\Column(name="amount", type="float")
      */
     private $amount;
 
@@ -42,9 +44,8 @@ class FioulPrice
      */
     private $date;
 
-
     /**
-     * Get id
+     * Get id.
      *
      * @return int
      */
@@ -54,9 +55,9 @@ class FioulPrice
     }
 
     /**
-     * Set zipCode
+     * Set zipCode.
      *
-     * @param integer $zipCode
+     * @param int $zipCode
      *
      * @return FioulPrice
      */
@@ -68,7 +69,7 @@ class FioulPrice
     }
 
     /**
-     * Get zipCode
+     * Get zipCode.
      *
      * @return int
      */
@@ -78,9 +79,9 @@ class FioulPrice
     }
 
     /**
-     * Set amount
+     * Set amount.
      *
-     * @param integer $amount
+     * @param float $amount
      *
      * @return FioulPrice
      */
@@ -92,9 +93,9 @@ class FioulPrice
     }
 
     /**
-     * Get amount
+     * Get amount.
      *
-     * @return int
+     * @return float
      */
     public function getAmount()
     {
@@ -102,7 +103,7 @@ class FioulPrice
     }
 
     /**
-     * Set date
+     * Set date.
      *
      * @param \DateTime $date
      *
@@ -116,7 +117,7 @@ class FioulPrice
     }
 
     /**
-     * Get date
+     * Get date.
      *
      * @return \DateTime
      */
@@ -125,4 +126,3 @@ class FioulPrice
         return $this->date;
     }
 }
-

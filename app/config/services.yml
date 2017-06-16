@@ -33,3 +33,11 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+    app.services.csv_to_array:
+        class: AppBundle\Services\CsvToArray
+        public: true
+
+    app.services.get_fioul_price:
+        class: AppBundle\Services\GetFioulPrice
+        arguments: ["@=service('doctrine.orm.entity_manager').getRepository('AppBundle:FioulPrice')"]
+        public: true
